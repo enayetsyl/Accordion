@@ -1,11 +1,12 @@
 import { useState } from "react";
-import accordionData from "../../../../public/accordianData.json";
+import accordionData from "../../../public/accordianData.json";
 const MultipleAccordionOpen = () => {
   const [selected, setSelected] = useState([]);
   console.log(selected)
 
   const handleAccordionSelect = (id) => {
     // console.log(id)
+    
     let multipleItem = [...selected]
     const findIndexofCurrentid = multipleItem.indexOf(id)
     console.log(findIndexofCurrentid)

@@ -1,13 +1,15 @@
 
 import './App.css'
+import MUIAccordion from './component/MUIAccordion/MUIAccordion'
+import MultipleAccordionOpen from './component/multipleAccordionOpen/multipleAccordionOpen'
 import SingleAccordionOpen from './component/singleAccordionOpen/accordian'
-import MultipleAccordionOpen from './component/singleAccordionOpen/multipleAccordionOpen/multipleAccordionOpen'
 
 function App() {
  
 
   return (
     <div className='space-y-10'>
+      <MUIAccordion/>
       <MultipleAccordionOpen/>
       <SingleAccordionOpen/>
     </div>
