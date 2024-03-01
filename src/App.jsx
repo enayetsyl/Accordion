@@ -1,12 +1,16 @@
 
 import './App.css'
-import Accordion from './component/accordian'
+import SingleAccordionOpen from './component/singleAccordionOpen/accordian'
+import MultipleAccordionOpen from './component/singleAccordionOpen/multipleAccordionOpen/multipleAccordionOpen'
 
 function App() {
  
 
   return (
-    <Accordion/>
+    <div className='space-y-10'>
+      <MultipleAccordionOpen/>
+      <SingleAccordionOpen/>
+    </div>
   )
 }
 

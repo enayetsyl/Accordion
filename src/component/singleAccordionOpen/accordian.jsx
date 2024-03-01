@@ -1,7 +1,6 @@
 import { useState } from "react";
-import accordionData from "../../public/accordianData.json";
-import './accordion.css'
-const Accordion = () => {
+import accordionData from "../../../public/accordianData.json";
+const SingleAccordionOpen = () => {
   const [selected, setSelected] = useState(null);
   console.log(selected);
   const handleAccordionSelect = (id) => {
@@ -10,7 +9,8 @@ const Accordion = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen">
+    <div className="flex flex-col justify-center items-center min-h-screen">
+      <h1 className="font-black text-4xl mb-10 bg-gradient-to-r from-purple-600 to-blue-400 text-transparent bg-clip-text ">Single Accordion Open</h1>
       <div >
         {accordionData && accordionData.length > 0 ? (
           accordionData.map((data) => (
@@ -39,4 +39,4 @@ const Accordion = () => {
   );
 };
 
-export default Accordion;
+export default SingleAccordionOpen;
