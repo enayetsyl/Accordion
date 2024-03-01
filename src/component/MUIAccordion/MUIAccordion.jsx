@@ -6,26 +6,15 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Fade from '@mui/material/Fade';
+import { handleExpansion } from "../../lib/functions";
 
 
 const MUIAccordion = () => {
   const [expanded, setExpanded] = useState([]);
 
-  const handleExpansion = (id) => {
-    setExpanded(prevExpanded => {
-      if (prevExpanded.includes(id)) {
-        return prevExpanded.filter(itemId => itemId !== id);
-      } else {
-        return [...prevExpanded, id];
-      }
-    });
-  };
-
- 
-
   return (
     <div className="flex flex-col justify-center items-center min-h-screen bg-emerald-200">
-      <h1 className="font-black text-4xl mb-10 bg-gradient-to-r from-purple-500  to-blue-500 text-transparent bg-clip-text ">Material UI Accordion Open</h1>
+      <h1 className="font-black text-4xl mb-10 bg-gradient-to-r from-purple-500  to-blue-500 text-transparent bg-clip-text ">Material UI Accordion</h1>
       
       <div>
       
@@ -36,7 +25,7 @@ const MUIAccordion = () => {
       <Accordion
         key={data.id}
         expanded={expanded.includes(data.id)}
-        onChange={() => handleExpansion(data.id)}
+        onChange={() => handleExpansion({id:data.id, setExpanded})}
         slots={{ transition: Fade }}
         slotProps={{ transition: { timeout: 400 } }}
         sx={{

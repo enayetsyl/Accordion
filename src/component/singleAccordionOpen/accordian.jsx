@@ -1,16 +1,19 @@
 import { useState } from "react";
 import accordionData from "../../../public/accordianData.json";
+import { handleSingleAccordionSelect } from "../../lib/functions";
+
 const SingleAccordionOpen = () => {
   const [selected, setSelected] = useState(null);
-  console.log(selected);
-  const handleAccordionSelect = (id) => {
-    // console.log(id)
-    setSelected(id === selected ? null : id);
-  };
 
   return (
     <div className="flex flex-col justify-center items-center min-h-screen">
+
+    {/* Section heading */}
+
       <h1 className="font-black text-4xl mb-10 bg-gradient-to-r from-purple-600 to-blue-400 text-transparent bg-clip-text ">Single Accordion Open</h1>
+
+    {/* Accordion start */}
+
       <div >
         {accordionData && accordionData.length > 0 ? (
           accordionData.map((data) => (
@@ -18,7 +21,7 @@ const SingleAccordionOpen = () => {
             className={`border-2 border-sky-500 p-3 mb-2 rounded-lg ${selected === data.id ? 'bg-blue-100' : ''} `}
             >
               <div className="flex justify-between items-start cursor-pointer gap-5 transition ease-in 3s"
-               onClick={() => handleAccordionSelect(data.id)}>
+               onClick={() => handleSingleAccordionSelect({id: data.id, selected, setSelected})}>
               <h3 
               className={` ${selected === data.id ? 'font-bold' : ''} pb-3`}
              >
@@ -40,3 +43,5 @@ const SingleAccordionOpen = () => {
 };
 
 export default SingleAccordionOpen;
+
+
