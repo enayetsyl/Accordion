@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "question": "What is the meaning of 'Islam'?",
+    "answer": "The word 'Islam' means submission to the will of Allah (God)."
+  },
+  {
+    "id": 2,
+    "question": "Who is considered the final prophet in Islam?",
+    "answer": "Prophet Muhammad (peace be upon him) is considered the final prophet in Islam."
+  },
+  {
+    "id": 3,
+    "question": "What is the holy book of Islam?",
+    "answer": "The holy book of Islam is the Quran."
+  },
+  {
+    "id": 4,
+    "question": "What is the name of the pilgrimage to Mecca that Muslims undertake?",
+    "answer": "The pilgrimage to Mecca that Muslims undertake is called Hajj."
+  },
+  {
+    "id": 5,
+    "question": "What is the name of the month of fasting observed by Muslims?",
+    "answer": "The month of fasting observed by Muslims is called Ramadan."
+  }
+]
